@@ -56,7 +56,6 @@ npm run cypress:open
 =======
 ## Project Structure
 
->>>>>>> 8a436a03dc2f7368727d742ca818a9d56b2da681
 src/
 ├── components/         
 │   ├── CommentForm/    
