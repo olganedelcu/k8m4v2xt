@@ -1,46 +1,104 @@
-# Getting Started with Create React App
+# Comments App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based commenting system that allows users to create, reply to, and delete comments.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Create new comments
+- Reply to existing comments
+- Delete comments
+- Persistent storage using localStorage
+- Fully responsive design
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- TypeScript
+- CSS Modules
+- Cypress (for testing)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/comments-app.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Run the development server:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Testing
 
-### `npm run eject`
+Run the Cypress tests:
+```bash
+npm run cypress:open
+```
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For the code present, we get this error:
+```
+'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+```
+How can I resolve this? If you propose a fix, please make it concise.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The error occurs because React is being used in a module but hasn't been imported. Since this is a TypeScript React component, we need to import React.
+Here's the fix - just add React to the existing import statement at the top of the file:
+CommentList.tsx
+import React, { useState, useEffect } from 'react';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Apply to CommentList.tsx
+This adds React to the named imports from 'react', resolving the UMD global reference error.
+now last step: ublic GitHub repository with a random 8-character string name 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Here's a random 8-character string that would work well as a GitHub repository name:
+k8m4v2xt
+This string:
+Is 8 characters long
+Uses only alphanumeric characters
+Is lowercase (following GitHub conventions)
+Is random enough to likely be unique
+Is easy to copy/paste
+You can create a new public repository on GitHub with this name.
+amke an email adding this repo: @https://github.com/olganedelcu/k8m4v2xt.git to Marius saying that the challenge is done and apologies for the late hour 
 
-## Learn More
+WEB PAGES
+Here's a draft email:
+,
+The email is brief and professional while including the key information - the completed repository link and a polite acknowledgment of the late submission time.
+make a README file for the project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Here's a README.md file for your comments app:
+:
+bash
+git clone https://github.com/olganedelcu/k8m4v2xt.git
+cd k8m4v2xt
+:
+bash
+npm install
+3. Run the development server:
+bash
+npm start
+:
+bash
+npm run cypress:open
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+src/
+├── components/
+│ ├── CommentForm.tsx
+│ ├── CommentItem.tsx
+│ └── CommentList.tsx
+├── types/
+│ └── Comment.ts
+└── App.tsx
+
