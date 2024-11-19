@@ -55,11 +55,21 @@ npm run cypress:open
 ## Project Structure
 
 src/
-├── components/
-│ ├── CommentForm.tsx
-│ ├── CommentItem.tsx
-│ └── CommentList.tsx
-├── types/
-│ └── Comment.ts
-└── App.tsx
-
+├── components/         
+│   ├── CommentForm/    
+│   │   ├── CommentForm.tsx
+│   │   └── CommentForm.css
+│   ├── CommentItem/    
+│   │   ├── CommentItem.tsx
+│   │   └── CommentItem.css
+│   └── CommentList/    
+│       ├── CommentList.tsx
+│       └── CommentList.css
+├── services/           
+│   └── commentService.ts  
+├── models/             
+│   ├── Comment.ts      
+│   └── CommentModel.ts 
+├── styles/            
+│   └── Comments.css                
+└── App.tsx            
