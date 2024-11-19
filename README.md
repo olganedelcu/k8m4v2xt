@@ -12,10 +12,18 @@ A React-based commenting system that allows users to create, reply to, and delet
 
 ## Technologies Used
 
-- React
-- TypeScript
-- CSS Modules
-- Cypress (for testing)
+- **Frontend Framework:** React 18
+- **Language:** TypeScript
+- **Styling:** CSS Modules
+- **Testing:** Cypress
+- **State Management:** React Hooks
+- **Storage:** localStorage
+- **Build Tool:** Vite
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
 
 ## Getting Started
 
