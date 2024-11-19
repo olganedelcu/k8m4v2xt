@@ -72,3 +72,31 @@
   .reply-form {
     margin-top: 10px;
   }
+  
+  .comment-container {
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .comment-form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .comment-container {
+      padding: 8px;
+    }
+    
+    .comment-content {
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+  }
