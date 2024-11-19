@@ -51,14 +51,28 @@ Run the Cypress tests:
 ```bash
 npm run cypress:open
 ```
+
+<<<<<<< HEAD
+=======
 ## Project Structure
 
+>>>>>>> 8a436a03dc2f7368727d742ca818a9d56b2da681
 src/
-├── components/
-│ ├── CommentForm.tsx
-│ ├── CommentItem.tsx
-│ └── CommentList.tsx
-├── types/
-│ └── Comment.ts
-└── App.tsx
-
+├── components/         
+│   ├── CommentForm/    
+│   │   ├── CommentForm.tsx
+│   │   └── CommentForm.css
+│   ├── CommentItem/    
+│   │   ├── CommentItem.tsx
+│   │   └── CommentItem.css
+│   └── CommentList/    
+│       ├── CommentList.tsx
+│       └── CommentList.css
+├── services/           
+│   └── commentService.ts  
+├── models/             
+│   ├── Comment.ts      
+│   └── CommentModel.ts 
+├── styles/            
+│   └── Comments.css                
+└── App.tsx            
