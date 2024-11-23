@@ -48,12 +48,11 @@ A React-based commenting system that allows users to create, reply to, and delet
 ## Testing
 
 Run the Cypress tests:
+
 ```bash
 npm run cypress:open
 ```
 
-<<<<<<< HEAD
-=======
 ## Project Structure
 
 src/
