@@ -61,6 +61,7 @@ const CommentService = {
       if (comment.id === commentId) {
         return false;
       }
+      // if comment has any reply, recursion is needed to delete the replies
       if (comment.replies.length > 0) {
         comment.replies = this.deleteComment(comment.replies, commentId);
       }
