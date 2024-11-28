@@ -6,7 +6,7 @@ interface CommentItemProps {
   comment: Comment;
   onDelete: (id: string) => void;
   onReply: (text: string, parentId: string) => void;
-  level: number;
+  level: number; // nesting level of comments
 }
 
 export function CommentItem({ comment, onDelete, onReply, level }: CommentItemProps) {

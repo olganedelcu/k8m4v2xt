@@ -21,7 +21,7 @@ export function CommentForm({ onSubmit }: CommentFormProps) {
         value={text}
         onChange={(e) => setText(e.target.value)} // target.value latest input from user
         placeholder="Write a comment..."
-        rows={3}
+        rows={3} // height of text area 
       />
       <button type="submit">Submit</button>
     </form>
