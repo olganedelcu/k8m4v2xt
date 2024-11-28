@@ -37,7 +37,7 @@ describe('Comments App', () => {
   
     it('should add a reply to a comment', () => {
       const parentComment = 'Parent comment'
-      const replyText = 'This is a reply'
+      const replyText = 'This is a reply comment'
       
       // Add parent comment
       cy.get('textarea').type(parentComment)
