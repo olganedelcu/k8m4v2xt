@@ -40,13 +40,13 @@ const CommentService = {
 
   addReply(comments: Comment[], parentId: string, newReply: Comment): Comment[] {
     return comments.map(comment => {
-      if (comment.id === parentId) {
+      if (comment.id === parentId) { // value and type check ===, is the current comment the one that receives reply?
         return {
           ...comment,
           replies: [...comment.replies, newReply]
         };
       }
-      if (comment.replies.length > 0) {
+      if (comment.replies.length > 0) { // do we already have any reply?
         return {
           ...comment,
           replies: this.addReply(comment.replies, parentId, newReply)
