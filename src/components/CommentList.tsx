@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CommentForm } from './CommentForm';
 import { CommentItem } from './CommentItem';
-import { CommentService } from '../services/commentService';
+import CommentService from '../services/commentService';
 import { Comment } from '../models/CommentModel';
 
 export function CommentList() {

@@ -1,9 +1,7 @@
 export interface Comment {
-    id: string;
-    text: string;
-    parentId: string | null;
-    createdAt: Date;
-    replies: Comment[];
+    id: string; // identifier for comment
+    text: string; // body of comment
+    parentId: string | null; // identify if comment is a reply to another comment
+    replies: Comment[]; // nested comments
   }
   
-export type NewComment = Omit<Comment, 'id' | 'createdAt' | 'replies'>;

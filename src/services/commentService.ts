@@ -1,27 +1,27 @@
 import { Comment } from '../models/CommentModel';
 
-export class CommentService {
-  private static STORAGE_KEY = 'comments';
+const STORAGE_KEY = 'comments';
 
-  static getComments(): Comment[] {
+const CommentService = {
+  getComments(): Comment[] {
     try {
-      const saved = localStorage.getItem(this.STORAGE_KEY);
+      const saved = localStorage.getItem(STORAGE_KEY);
       return saved ? JSON.parse(saved) : [];
     } catch (error) {
       console.error('Error loading comments:', error);
       return [];
     }
-  }
+  },
 
-  static saveComments(comments: Comment[]): void {
+  saveComments(comments: Comment[]): void {
     try {
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(comments));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
     } catch (error) {
       console.error('Error saving comments:', error);
     }
-  }
+  },
 
-  static addComment(comments: Comment[], text: string, parentId?: string): Comment[] {
+  addComment(comments: Comment[], text: string, parentId?: string): Comment[] {
     const newComment: Comment = {
       id: Date.now().toString(),
       text,
@@ -34,9 +34,9 @@ export class CommentService {
     
     this.saveComments(updatedComments);
     return updatedComments;
-  }
+  },
 
-  private static addReply(comments: Comment[], parentId: string, newReply: Comment): Comment[] {
+  addReply(comments: Comment[], parentId: string, newReply: Comment): Comment[] {
     return comments.map(comment => {
       if (comment.id === parentId) {
         return {
@@ -52,9 +52,9 @@ export class CommentService {
       }
       return comment;
     });
-  }
+  },
 
-  static deleteComment(comments: Comment[], commentId: string): Comment[] {
+  deleteComment(comments: Comment[], commentId: string): Comment[] {
     const updatedComments = comments.filter(comment => {
       if (comment.id === commentId) {
         return false;
@@ -68,4 +68,6 @@ export class CommentService {
     this.saveComments(updatedComments);
     return updatedComments;
   }
-}
+};
+
+export default CommentService;
