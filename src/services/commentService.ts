@@ -3,7 +3,8 @@ import { Comment } from '../models/CommentModel';
 const STORAGE_KEY = 'comments';
 
 const CommentService = {
-  getComments(): Comment[] {
+  // receive comments from localStorage, if no found returns empty array
+  getComments(): Comment[] { 
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       return saved ? JSON.parse(saved) : [];
@@ -13,7 +14,8 @@ const CommentService = {
     }
   },
 
-  saveComments(comments: Comment[]): void {
+  // save comments array to localStorage after converting it to a JSON array
+  saveComments(comments: Comment[]): void { 
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
     } catch (error) {
