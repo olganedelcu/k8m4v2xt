@@ -35,7 +35,7 @@ describe("Comments App", () => {
     cy.get(".comment-content").should("not.exist");
   });
 
-  it("should add a reply to a comment", () => {
+  it("should add 100 replies to a comment", () => {
     const parentComment = "Parent comment";
     const replyText = "This is a reply comment";
 
@@ -43,7 +43,7 @@ describe("Comments App", () => {
     cy.get("textarea").type(parentComment);
     cy.get('form button[type="submit"]').click();
 
-    // Add reply
+    // Add replies
 
     for (let i = 1; i <= 1000; i++) {
       cy.get(".reply-button").each(($button) => {
