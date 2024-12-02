@@ -8,7 +8,7 @@ export function CommentForm({ onSubmit }: CommentFormProps) {
   const [text, setText] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+   e.preventDefault();
     if (text.trim()) { // if text is not only whitespace
       onSubmit(text);
       setText('');

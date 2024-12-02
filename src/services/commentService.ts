@@ -28,7 +28,7 @@ const CommentService = {
       id: Date.now().toString(),
       text,
       replies: []
-    };
+        };
 
     const updatedComments = parentId 
       ? this.addReply(comments, parentId, newComment)
