@@ -48,7 +48,7 @@ describe("Comments App", () => {
     for (let i = 1; i <= 1000; i++) {
       cy.get(".reply-button").each(($button) => {
         cy.wrap($button).click(); // Click each reply button
-        cy.get(".reply-form textarea").type(`${replyText} ${i}`); // Add unique text for each reply
+        cy.get(".reply-form textarea").type(`${replyText} ${i}`); 
         cy.get('.reply-form button[type="submit"]').click();
       });
     }
